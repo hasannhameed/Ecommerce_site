@@ -91,19 +91,23 @@ footer {
 
 .footer-title {
   font-size: 4rem;
-  margin-left: 2%;
+  margin-left: 20%;
   margin-right: 15px; /* Add some space between the title and the edge */
+}
+
+.footer-icons{
+  margin-top:10px;
+   margin-right: 20%;
 }
 
 .footer-icons ul {
   list-style: none;
-  padding: 10px;
   display: flex;
-  gap: 20px; /* Space between icons */
+  gap: 10px; 
 }
 
 .footer-icons li {
-  
+   background-color: white;
   display: inline;
 }
 
