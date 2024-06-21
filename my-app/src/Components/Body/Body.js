@@ -4,6 +4,7 @@ import './Body.css';
 
 const productsArr = [
   {
+    title2: 'hello',
     title: 'Colors',
     price: 100,
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
