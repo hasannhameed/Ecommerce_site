@@ -1,8 +1,8 @@
 import React from 'react';
 // import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header/Header';
-import Body from './Components/Body/Body';
+import Header from './Components/webpage/Header';
+import Body from './Components/webpage/Body';
 import Footer from './Components/Footer/Footer';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Body />
       <Footer />
-    </>
+   </>
   );
 }
 
