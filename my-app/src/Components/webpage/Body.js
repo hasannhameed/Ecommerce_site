@@ -27,14 +27,11 @@ const productsArr = [
 
 const Body = () => {
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
+
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
-
-  const handleShowCart = () => setShowCart(true);
-  const handleCloseCart = () => setShowCart(false);
 
   return (
     <Fragment>
@@ -45,15 +42,12 @@ const Body = () => {
         <div className="p-4">
           <h1 className="section-title">PRODUCTS</h1>
         </div>
-        <Button variant="primary" onClick={handleShowCart}>
-          Cart ({cart.length})
-        </Button>
         <Row className="gy-4">
           {productsArr.map((product, index) => (
             <Col xs={12} md={6} lg={4} key={index} className="d-flex flex-column align-items-center">
               <h3>{product.title}</h3>
               <Image className='images' src={product.imageUrl} rounded />
-              <div className="container-2">
+                <div className="container-2">
                 <div className='Info'><p>${product.price}</p></div>
                 <div className='Info'>
                   <Button className='button-2' onClick={() => addToCart(product)}>ADD TO CART</Button>
