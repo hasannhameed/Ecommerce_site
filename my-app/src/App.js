@@ -5,10 +5,12 @@ import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
 import Footer from './Components/Footer/Footer';
 
+
 function App() {
-const [show,setShow] = useState(false);
+let setShow = () =>{
+  setShow = false;
+}
 const [cart, setCart] = useState([]);
-const [warning, setwarning] = useState(false);
 
 const handleClick  = (item) =>{
   let isPresent = false;
@@ -18,14 +20,11 @@ const handleClick  = (item) =>{
   })
   if(isPresent){
     alert("item already added")
-    setwarning(true);
-   setTimeout(()=>{
-     setwarning(false);
-  },1000);
-  return;
 }
   setCart([...cart, item]);
 }
+
+
 const handleChange = (item, action) => {
   setCart((prevCart) =>
     prevCart.map((cartItem) =>
@@ -35,8 +34,11 @@ const handleChange = (item, action) => {
     ).filter((cartItem) => cartItem.amount > 0)
   );
 };
+
+
   return (
     <>
+    
      <Header size={cart.length} cart={cart} setCart={setCart} setShow={setShow} handleChange={handleChange}/>
      <Body  handleClick={handleClick}/>
      <Footer/>
