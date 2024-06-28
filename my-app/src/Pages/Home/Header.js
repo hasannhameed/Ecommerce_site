@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css'
+import './Headerr.css'
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import R from './R.png'
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className="header">
-      <div className="nav-links">
+      <div className="nav-linksss">
         <Link to="/Home" className="nav-link"><h5>HOME</h5></Link>
         <Link to="/" className="nav-link"><h5>STORE</h5></Link>
         <Link to="/About" className="nav-link"><h5>ABOUT</h5></Link>
