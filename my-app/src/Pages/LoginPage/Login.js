@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import LoginList from './LoginList';
 import AddLogin from './AddLogin';
 import './Login.css'; // Assuming Login.css is where you store your CSS
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [logins, setLogins] = useState([]);
@@ -60,12 +61,13 @@ function Login() {
       setLogins((prevLogins) => [...prevLogins, newLogin]);
 
       // Display success message
+
       setSuccessMessage('Successfully logged in!');
       
       // Clear success message after 3 seconds
       setTimeout(() => {
         setSuccessMessage('');
-      }, 3000);
+      }, 2000);
     } catch (error) {
       setError(error.message);
     }
@@ -87,14 +89,20 @@ function Login() {
 
   return (
     <React.Fragment>
+      
       {successMessage && <p className="success-message">{successMessage}</p>}
+      <div className='complain'>
+      <h6>Have any issue?  write us</h6>
+      <h5> <Link to='/Report'>Click here</Link></h5>
+     
+    </div>
       <section>
         <AddLogin onAddLogin={addLoginHandler} />
       </section>
-      <section>
+       {/* <section>
         <button onLost={fetchLoginsHandler}>Fetch Logins</button>
-      </section>
-      <section>{content}</section>
+      </section> */}
+      {content}
     </React.Fragment>
   );
 }

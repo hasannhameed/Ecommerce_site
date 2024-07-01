@@ -24,6 +24,7 @@ import pass from './password.png';
       props.onAddLogin(form);
     }
   return (
+    <div>
     <form onSubmit={submitHandler}>
     <div className="body">
     <div className='containerrr'>
@@ -56,6 +57,7 @@ import pass from './password.png';
     </div>
     </div>
     </form>
+    </div>
   );
 }
 

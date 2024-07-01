@@ -5,6 +5,7 @@ import App from './App';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Login from './Pages/LoginPage/Login';
+import Report from './Pages/ReportPage.js/Report';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   }, {
     path: '/Login',
     element: <Login />
+  },
+  {
+    path: '/Report',
+    element: <Report />
   },
 ]);
 
