@@ -1,6 +1,6 @@
 
 .contaaner{
-  background-color:  #e0f7fa; ;
+  background-color:  #ffffff; ;
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 200px;
@@ -9,7 +9,7 @@
 
     display: flex;
     justify-content: center;
-    background-color: #e0f7fa; /* Light sky blue background */
+    background-color: #ffffff; /* Light sky blue background */
 }
 
 .body-section {
@@ -17,7 +17,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
     padding: 20px;
-    background-color: #e0f7fa; /* Light sky blue background */
+    background-color: #ffffff; /* Light sky blue background */
   }
   
   .cards {

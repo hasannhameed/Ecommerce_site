@@ -9,12 +9,12 @@ const Cards = ({ item, handleClick }) => {
       <div>
         <img src={imageUrl} alt={title} />
       </div>
-      <div>
+      <section>
         <p>{title}</p>
         <p>Rs.{price}</p>
         <p>{quantity}</p>
         <button onClick={()=>handleClick(item)}>Add to Cart</button>
-      </div>
+      </section>
     </div>
   );
 };
