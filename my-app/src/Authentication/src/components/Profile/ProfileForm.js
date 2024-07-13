@@ -40,7 +40,7 @@ const ProfileForm = () => {
       // Password change was successful
       alert("Password changed successfully!");
       authCtx.login(data.idToken); // Assuming this method updates your authentication state
-      navigate('/'); // Navigate to home or another route
+      navigate('/Home'); // Navigate to home or another route
     })
     .catch(error => {
       // Handle network errors or other errors
