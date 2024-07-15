@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cart.css';
 
 const Cart = ({ size, cart, handleChange }) => {
@@ -9,17 +9,24 @@ const Cart = ({ size, cart, handleChange }) => {
     setShowCart(!showCart);
   };
 
-  const handlePrice = () => {
-    let totalPrice = 0;
-    cart.forEach((item) => {
-      totalPrice += item.amount * item.price;
-    });
-    setAmount(parseInt(totalPrice));
-  };
-
   useEffect(() => {
-    handlePrice();
-  });
+    const calculateTotalPrice = () => {
+      let totalPrice = 0;
+      cart.forEach((item) => {
+        totalPrice += item.amount * item.price;
+      });
+      setAmount(totalPrice);
+    };
+
+    calculateTotalPrice();
+  }, [cart]);
+
+  const handleBuy = () => {
+    // Handle the buy functionality here, e.g., redirect to checkout or finalize purchase
+    console.log('Buying items:', cart);
+    alert('Items bought successfully!');
+    // Additional logic for checkout or finalizing purchase can be added here
+  };
 
   return (
     <>
@@ -33,9 +40,7 @@ const Cart = ({ size, cart, handleChange }) => {
           <div className='cart'>
             <header>
               <h2>Your Cart</h2>
-              <button className='close-btn' onClick={() => setShowCart(false)}>
-                Close Cart
-              </button>
+              <button className='close-btn' onClick={toggleCart}>Close Cart</button>
             </header>
             <article>
               {cart.map((item) => (
@@ -45,16 +50,13 @@ const Cart = ({ size, cart, handleChange }) => {
                     <p>{item.title}</p>
                     <span>Rs.{item.price}</span>
                   </div>
-                  <div>
-                    <button >+</button>
-                    {/* onClick={() => incrementAmount(item.id)} */}
+                  <div className='cart_controls'>
+                    <button onClick={() => handleChange(item.id, "increment")}>+</button>
                     <span>{item.amount}</span>
-                    <button  >-</button>
-                    {/* onClick={() => decrementAmount(item.id)} */}
+                    <button onClick={() => handleChange(item.id, "decrement")}>-</button>
                   </div>
                   <div>
-                    <button onClick={()=>handleChange(item.id,"+")}>Remove</button>
-                    {/* onClick={() => removeItem(item.id)} */}
+                    <button onClick={() => handleChange(item.id, "remove")}>Remove</button>
                   </div>
                 </div>
               ))}
@@ -62,6 +64,7 @@ const Cart = ({ size, cart, handleChange }) => {
                 <span>Total Price</span>
                 <span>Rs - {amount}</span>
               </div>
+              <button  className='close-btn' onClick={handleBuy}>Buy</button>
             </article>
           </div>
         </div>

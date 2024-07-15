@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
-// import Login from './Pages/LoginPage/Login';
 import Report from './Pages/ReportPage.js/Report';
 import { AuthContextProvider } from './Authentication/src/Store.js/auth-context';
 import AuthPage from './Authentication/src/pages/AuthPage';

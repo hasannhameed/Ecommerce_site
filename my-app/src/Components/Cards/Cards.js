@@ -8,14 +8,16 @@ const Cards = ({ item, handleClick }) => {
   return (
     <div className='cards'>
       <div>
-        <img src={imageUrl} alt={title} />
+        {/* Wrap the image with Link to navigate to product detail page when clicked */}
+        <Link to={`/product/${id}`} state={{ item }}>
+          <img src={imageUrl} alt={title} />
+        </Link>
       </div>
       <section>
-        <p>{title}</p>
-        <p>Rs.{price}</p>
-        <p>{quantity}</p>
+        <p className="title">{title}</p>
+        <p className="price">Rs.{price}</p>
+        <p className="quantity">Quantity: {quantity}</p>
         <button onClick={() => handleClick(item)}>Add to Cart</button>
-        <Link to={`/product/${id}`} state={{ item }}>View Product</Link>
       </section>
     </div>
   );

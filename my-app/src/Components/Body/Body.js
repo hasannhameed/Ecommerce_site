@@ -1,5 +1,5 @@
-// import React,{useState} from 'react';
-import cartElements from '../Assets/Assets';
+import React from 'react';
+import cartElements from '../Assets/Assets'; // Replace with your actual data source
 import Cards from '../Cards/Cards';
 import './Body.css';
 
@@ -14,8 +14,7 @@ const Body = ({ handleClick }) => {
           cartElements.map((item, index) => (
             <Cards key={index} item={item} handleClick={handleClick} />
           ))
-       }
-
+        }
       </section>
     </div>
   );

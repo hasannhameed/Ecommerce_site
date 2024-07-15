@@ -104,14 +104,6 @@
     color: white;
   }
   
-  /* .header {
-    width: 100%; */
-    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); */
-    /* display: flex;
-    justify-content: space-between; */
-    /* align-items: center; */
-    /* padding: 0 10%;
-  } */
   
   
   
@@ -133,22 +125,8 @@
     font-weight: bold;
   }
   
-  /* .header button {
-    font: inherit;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    font-weight: bold;
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-   */
   .header a:hover {
     color: #ffffff;
   }
   
-  /* .header button:hover {
-    background-color: none;
-    color: #c291e2
-  } */
+  
