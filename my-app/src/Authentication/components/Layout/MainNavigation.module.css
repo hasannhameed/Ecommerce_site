@@ -7,7 +7,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  bottom: 5px solid grey;
 }
 
 .logo {
@@ -50,7 +49,39 @@
   color: #ffffff;
 }
 
-/* .header button:hover {
-  background-color: grey;
-  color: #ffffff;
-} */
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .header ul {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .header li {
+    margin: 0 0.5rem;
+  }
+
+  .header button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 2%;
+  }
+
+  .header li {
+    margin: 0 0.25rem;
+  }
+
+  .header button {
+    font-size: 0.9rem;
+  }
+}

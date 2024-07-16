@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import AuthContext from '../../Authentication/src/Store.js/auth-context';
+import AuthContext from '../../Authentication/Store.js/auth-context';
 import Cart from '../Cart/Cart';
 import classes from './Header.css';
 import axios from 'axios';

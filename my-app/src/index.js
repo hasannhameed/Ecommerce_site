@@ -5,10 +5,10 @@ import App from './App';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Report from './Pages/ReportPage.js/Report';
-import { AuthContextProvider } from './Authentication/src/Store.js/auth-context';
-import AuthPage from './Authentication/src/pages/AuthPage';
-import UserProfile from './Authentication/src/components/Profile/UserProfile';
-import HomePage from './Authentication/src/pages/HomePage'
+import { AuthContextProvider } from './Authentication/Store.js/auth-context';
+import AuthPage from './Authentication/pages/AuthPage';
+import UserProfile from './Authentication/components/Profile/UserProfile';
+import HomePage from './Authentication/pages/HomePage'
 import ProductList from './Pages/ProductPage/Product';
 import Product from './Pages/ProductPage/Product';
 ReactDOM.render(

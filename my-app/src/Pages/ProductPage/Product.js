@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment, useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
 import Header from '../About/Header';
 import './Product.css';
-import AuthContext from '../../Authentication/src/Store.js/auth-context';
+import AuthContext from '../../Authentication/Store.js/auth-context';
 
 const Product = () => {
   const location = useLocation();

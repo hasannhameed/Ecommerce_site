@@ -8,7 +8,7 @@ const AuthContext = React.createContext({
     logout: () => {}
 });
 
-const TOKEN_EXPIRATION_TIME = 5 * 60 * 1000; // 5 minutes in milliseconds
+const TOKEN_EXPIRATION_TIME = 10 * 60 * 1000; // 5 minutes in milliseconds
 
 export const AuthContextProvider = (props) => {
     const initialToken = localStorage.getItem('token');

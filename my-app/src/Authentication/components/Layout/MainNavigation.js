@@ -34,6 +34,11 @@ const MainNavigation = () => {
               <button onClick={logoutHandler}>Logout</button>
             </li>
           )}
+          {isLoggedIn && (
+            <li>
+              <Link to='/Report'>Report</Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>
