@@ -3,10 +3,24 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../Authentication/src/Store.js/auth-context';
 import Cart from '../Cart/Cart';
 import classes from './Header.css';
+import axios from 'axios';
+
+const API_URL = 'https://crudcrud.com/api/bed72003a9bc40ab81e804361bda19ea/cart';
 
 const Header = ({ size, cart, setShow, handleChange }) => {
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
+
+  const handleButtonClick = () => {
+    axios.get(API_URL)
+      .then(response => {
+        console.log('Cart items:', response.data);
+        setShow(true); // Show the cart after fetching the data
+      })
+      .catch(error => {
+        console.error('There was an error fetching the cart items!', error);
+      });
+  };
 
   return (
     <Fragment>
@@ -30,7 +44,7 @@ const Header = ({ size, cart, setShow, handleChange }) => {
             )}
           </ul>
         </nav>
-        <button onClick={() => setShow(true)} className='cart-button'>
+        <button onClick={handleButtonClick} className='cart-button'>
           <Cart size={size} cart={cart} handleChange={handleChange} />
         </button>
       </header>
