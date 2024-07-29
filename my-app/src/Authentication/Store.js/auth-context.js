@@ -1,12 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, createContext } from 'react';
 import React from 'react';
 
-const AuthContext = React.createContext({
-    token: '',
-    isLoggedIn: false,
-    login: (token) => {},
-    logout: () => {}
-});
+export const AuthContext = createContext();
 
 const TOKEN_EXPIRATION_TIME = 10 * 60 * 1000; // 5 minutes in milliseconds
 
@@ -17,7 +12,7 @@ export const AuthContextProvider = (props) => {
 
     const userIsLoggedIn = !!token;
 
-    const loginHandler = (token) => {
+    const loginHandler = (token) => { 
         const expirationTime = new Date().getTime() + TOKEN_EXPIRATION_TIME;
         setToken(token);
         localStorage.setItem('token', token);
