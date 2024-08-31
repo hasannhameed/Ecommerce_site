@@ -1,0 +1,104 @@
+*{
+    text-align: center;
+}
+
+.store {
+    background-color: #777;
+    color: black;
+    width: 100%;
+    height: 15vw;
+}
+
+.store h1 {
+    color: #fff;
+    font-size: 6rem;
+    padding-top: 4rem;
+    text-align: center;
+}
+section{
+    width: 100vw;
+    text-align: center;
+}
+/* Container for each music section */
+.music-container {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Section inside each container */
+  .music-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Class for images */
+  .img-class {
+    margin: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  /* Style for album title */
+  .album-title {
+    margin-bottom: 10px;
+    text-align: center; /* Center text */
+  }
+  
+  /* Style for images */
+.img-class img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    transform-origin: center center; /* Zooms from the center */
+  }
+  
+  /* Zoom effect on hover */
+  .img-class img:hover {
+    transform: scale(1.03); /* Scales the image by 3% */
+  }
+  
+  /* Style for button container */
+  .button-div {
+    display: flex;
+    flex-direction: column; /* Align button and price in a column */
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Style for buttons */
+  .button-div button {
+    margin-top: 5px;
+    color: black;
+  }
+
+@media (max-width: 920px) {
+    .store {
+        height: 30vw;
+    }
+    .store h1 {
+        font-size: 4rem;
+         padding: 5rem 0px;
+    }
+
+}
+
+@media (max-width: 490px) {
+    .store {
+        height: 50vw;
+    }
+
+    .store h1 {
+        font-size: 3rem;
+        padding: 5rem 0px;
+    }
+
+    
+}
